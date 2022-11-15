@@ -1,5 +1,5 @@
 {
-  "name": "front-helix",
+  "name": "fullstack app",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -10,22 +10,9 @@
     "release": "shadow-cljs release app",
     "repl": "shadow-cljs clj-repl"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/moclojer/front-helix.git"
-  },
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/moclojer/front-helix/issues"
-  },
-  "homepage": "https://github.com/moclojer/front-helix#readme",
   "devDependencies": {
-    "@testing-library/react": "^13.4.0",
-    "karma": "^6.4.1",
-    "karma-chrome-launcher": "^3.1.1",
-    "karma-cljs-test": "^0.1.0",
-    "msw": "^0.47.4",
     "npm-run-all": "^4.1.5",
     "shadow-cljs": "^2.20.7",
     "tailwindcss": "^3.2.1"
