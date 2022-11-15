@@ -1,9 +1,8 @@
-{:paths ["src" "resources"]
+{:paths ["src/cljs" "src/clj" "resources"]
  :deps {org.clojure/clojure {:mvn/version "1.11.1"}
         refx/core {:git/url "https://github.com/ferdinand-beyer/refx.git"
                    :git/sha "bdfbb4401a2fcc1258ecc3544e0e290548fc3ea3"
                    :deps/root "core"}
-        lilactown/helix {:mvn/version "0.1.9"}
         funcool/promesa {:mvn/version "9.0.494"}
         metosin/reitit-schema {:mvn/version "0.5.18"}
         metosin/reitit-frontend {:mvn/version "0.5.18"}
@@ -12,8 +11,16 @@
         ring-cors/ring-cors {:mvn/version "0.1.13"}
         http-kit/http-kit {:mvn/version "2.3.0"}
         org.postgresql/postgresql {:mvn/version "42.2.2"}
-        com.layerware/hugsql {:mvn/version "0.5.1"}}
+        com.layerware/hugsql {:mvn/version "0.5.1"}
+        org.clojure/java.jdbc {:mvn/version "0.7.12"}
+        mysql/mysql-connector-java {:mvn/version "8.0.30"}
+        com.github.seancorfield/honeysql {:mvn/version "2.3.911"}
+        javax.servlet/servlet-api {:mvn/version "2.5"}
+        ring/ring {:mvn/version "1.9.0"}
+        metosin/muuntaja {:mvn/version "0.6.8"}}
  :aliases
- {:cljs
-  {:extra-paths ["test"]
-   :extra-deps {thheller/shadow-cljs {:mvn/version "2.20.7"}}}}}
+ {:build {:deps {io.github.clojure/tools.build {:git/tag "v0.8.3" :git/sha "0d20256"}}
+          :ns-default build}
+  :cljs {:extra-deps {thheller/shadow-cljs {:mvn/version "2.19.9"}
+                      lilactown/helix {:mvn/version "0.1.8"}
+                      funcool/promesa {:mvn/version "9.0.494"}}}}}

@@ -1,6 +1,7 @@
 (ns app.auth.events
   (:require [app.http]
-            [refx.alpha :as refx]))
+            [refx.alpha :as refx]
+            [cljs.pprint :as pprint]))
 
 (refx/reg-event-fx
  :app.auth/login-done
@@ -26,8 +27,9 @@
  :app.auth/login
  (fn
    [{db :db} [_ login]]
+   (pprint/pprint login)
    {:http {:method      :post
-           :url         "/api/signin"
+           :url         "/api/login"
            :body        login
            :accept :json
            :content-type :json

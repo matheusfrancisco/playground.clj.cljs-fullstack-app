@@ -5,11 +5,8 @@
   "main": "index.js",
   "scripts": {
     "preinstall": "npm run prereq --prefix ./lib && mkdir -p resources/public/assets/css/ && cp ./lib/styles/tailwind.css ./resources/public/assets/css/output.css",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "ci:tests": "shadow-cljs compile ci-tests && karma start --single-run",
-    "watch:tests": "shadow-cljs watch tests",
     "watch:app": "shadow-cljs watch app",
-    "watch": "shadow-cljs watch app tests",
+    "watch": "shadow-cljs watch app",
     "release": "shadow-cljs release app",
     "repl": "shadow-cljs clj-repl"
   },

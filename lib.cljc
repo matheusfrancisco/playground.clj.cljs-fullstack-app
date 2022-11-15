@@ -1,4 +1,4 @@
-(ns app.lib
+(ns lib
   #?(:clj (:require [helix.core :as helix]))
   #?(:cljs (:require-macros [app.lib])))
 
